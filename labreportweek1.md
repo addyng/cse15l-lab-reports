@@ -58,7 +58,7 @@ Below are some of the commands I tried.
 
 `pwd` returns the current working directory
 
-`ls` lists out the folders and files within the desired directory.
+`ls` lists out the folders and files within the desired directory
 > In this case, **perl5** is a folder within the directory. 
 
 `cat` prints whatever is in the file
