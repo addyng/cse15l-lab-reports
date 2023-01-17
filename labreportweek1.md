@@ -4,9 +4,10 @@ This is a tutorial on how to install Visual Studio Code (VScode) and remotely co
 
 *By Addy*
 
+# Step 1 - Installing VScode
+
 ---
 
-# Step 1 - Installing VScode
 The first step is to install VScode. Since I already had VScode installed on my computer, I skipped this step.
 
 Download the version matching your operating system (Windows, Mac, etc.) at their website: [VScode Website](https://code.visualstudio.com/)
@@ -17,6 +18,8 @@ Once downloaded, open VScode and it should look like this (Mac version):
 ---
 
 # Step 2 - Remotely Connecting
+
+---
 
 ## 2.1 - Accesing your CSE15L account
 The next step is to remotely connect to the remote server. This requires a CSE15L username and password, which can be found by following the class's provided tutorial at: [Tutorial Link](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit)
@@ -44,6 +47,9 @@ That means you have successfully connected to the remote server! Continue onto S
 ---
 
 # Step 3 - Trying Some Commands
+
+---
+
 Now that you've connected to the remote server, it's time to try commands!
 Some commands include: `cd`, `ls`, `pwd`, `mkdir`, `cp`
 
