@@ -51,7 +51,7 @@ That means you have successfully connected to the remote server! Continue onto S
 ---
 
 Now that you've connected to the remote server, it's time to try commands!
-Some commands include: `cd`, `ls`, `pwd`, `mkdir`, `cp`
+Some commands include: `pwd`, `ls`, `cat`, `mkdir`, `cd`, `cp`
 
 Below are some of the commands I tried.
 ![Image](Screenshot 2023-01-11 at 2.30.36 PM.png)
