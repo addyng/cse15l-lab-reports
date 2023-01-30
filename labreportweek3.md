@@ -7,11 +7,11 @@ The web server below is comprised of two files: `StringServer.java` and `Server.
 **StringServer.java** contains the main method to start the server and the handleRequest method to perform different actions depending on the web server's URL. **Server.java** is a program provided by the CSE 15L tutors with the code required to start an HTTP Server.
 
 ---
-**Below is the code for `StringServer.java`**
+## Below is the code for `StringServer.java`
 ![StringServer.java](Screenshot 2023-01-30 at 5.34.58 AM.png)
 
 ---
-**Below are the result of two actions utilizing the `/add-message` path**
+## Below are the result of two actions utilizing the `/add-message` path
 ![Part1](Screenshot 2023-01-30 at 5.36.42 AM.png)
 * The methods called are `handleRequest(URI url)`, `getPath()`, `equals()`, `contains()`, `getQuery()`, and `split`.
 * The `strings` String value stores the added messages from the URL. 
@@ -36,6 +36,7 @@ The `reversed(int[] arr)` method has a symptom in which the method doesn't prope
 
 ---
 **Failure inducing input**
+
 It fails the JUnit test:
 ```
 @Test
@@ -48,6 +49,7 @@ in which the input is an int array, `input1 = {1, 2, 3}`;
 
 ---
 **Passing input**
+
 It passes the JUnit test:
 ```
 @Test
@@ -60,12 +62,14 @@ in which the input an empty int array, `input1 = { }`.
 
 ---
 **Symptoms**
+
 The symptoms are shown below:
 ![Symptoms](Screenshot 2023-01-30 at 7.58.57 AM.png)
 As seen in the screenshot, the empty array input passes while the other fails. The symptom of the failing test was that the element at index 0 was `0` instead of `3`.
 
 ---
 **The Bug**
+
 Before code:
 ```
 static int[] reversed(int[] arr) {
