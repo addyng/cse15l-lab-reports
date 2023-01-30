@@ -45,7 +45,7 @@ It fails the JUnit test:
     assertArrayEquals(new int[]{3, 2, 1}, ArrayExamples.reversed(input1));
   }
 ```
-in which the input is an int array, `input1 = {1, 2, 3}`;
+in which the input is an int array, `input1 = {1, 2, 3}`.
 
 ---
 **Passing input**
