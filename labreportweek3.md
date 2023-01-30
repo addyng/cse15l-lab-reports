@@ -6,14 +6,12 @@ The web server below is comprised of two files: `StringServer.java` and `Server.
 
 **StringServer.java** contains the main method to start the server and the handleRequest method to perform different actions depending on the web server's URL. **Server.java** is a program provided by the CSE 15L tutors with the code required to start an HTTP Server.
 
-Below is the code for `StringServer.java`
-
 ---
+**Below is the code for `StringServer.java`**
 ![StringServer.java](Screenshot 2023-01-30 at 5.34.58 AM.png)
 
-Below are the result of two actions utilizing the `/add-message` path
-
 ---
+**Below are the result of two actions utilizing the `/add-message` path**
 ![Part1](Screenshot 2023-01-30 at 5.36.42 AM.png)
 * The methods called are `handleRequest(URI url)`, `getPath()`, `equals()`, `contains()`, `getQuery()`, and `split`.
 * The `strings` String value stores the added messages from the URL. 
@@ -23,6 +21,7 @@ Below are the result of two actions utilizing the `/add-message` path
 * `contains` checks if the path string contains the `"/add-message"` string argument.
 * A string array `parameters` is created to store the arguments from the query as a string. The `getQuery` method is used to obtain the query or `"?s=WHAT'S UP"` as a string. Then, `split("=")` is used to separate the string into two strings between the equal sign argument: `"s"` as parameters[0] and `"WHAT'S UP"` as parameters[1].
 * The three values that are changed are the `strings` value, `parameters` value, and `url` value. `strings` is an instance variable that starts as an empty string and then concatenates the desired message and a new line `"\n"` when the `"/add-message"` query is called. Currently `strings` is `"WHAT'S UP" + "\n"`. `parameters` and `url` are local variables that depend on the page URL entered. In this case, `parameters` is an array `["s", "WHAT'S UP"]`. 
+
 ---
 ![Part2](Screenshot 2023-01-30 at 5.37.06 AM.png)
 > Since this url calls the same methods, it is similar to the above, but with some different values.
@@ -35,9 +34,8 @@ Below are the result of two actions utilizing the `/add-message` path
 ## Reversed array bug from ArrayExamples.java
 The `reversed(int[] arr)` method has a symptom in which the method doesn't properly reverse an inputted int array.
 
-**Failure inducing input**
-
 ---
+**Failure inducing input**
 It fails the JUnit test:
 ```
 @Test
@@ -48,9 +46,8 @@ It fails the JUnit test:
 ```
 in which the input is an int array, `input1 = {1, 2, 3}`;
 
-**Passing input**
-
 ---
+**Passing input**
 It passes the JUnit test:
 ```
 @Test
@@ -61,16 +58,14 @@ It passes the JUnit test:
 ```
 in which the input an empty int array, `input1 = { }`.
 
-**Symptoms**
-
 ---
+**Symptoms**
 The symptoms are shown below:
 ![Symptoms](Screenshot 2023-01-30 at 7.58.57 AM.png)
 As seen in the screenshot, the empty array input passes while the other fails. The symptom of the failing test was that the element at index 0 was `0` instead of `3`.
 
-**The Bug**
-
 ---
+**The Bug**
 Before code:
 ```
 static int[] reversed(int[] arr) {
