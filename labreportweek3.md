@@ -1,6 +1,6 @@
-#CSE 15L Week 2 & 3 Lab Report
+# CSE 15L Week 2 & 3 Lab Report by *Addy*
 
-#Part 1
+# Part 1
 
 The web server below is comprised of two files: `StringServer.java` and `Server.java`
 
@@ -24,12 +24,14 @@ Below are the result of two actions utilizing the `/add-message` path
 
 ![Part2](Screenshot 2023-01-30 at 5.37.06 AM.png)
 > Since this url calls the same methods, it is similar to the above, but with some different values.
+
 * The methods called are `handleRequest(URI url)`, `getPath()`, `equals()`, `contains()`, `getQuery()`, and `split`.
 * The relevant values are `strings`, `parameters`, and `url (argument)`. The relevant constants are the same, `"/" (argument)`, `"/add-message" (argument)`, `"=" (argument)`, `"s" (argument)`, and `"\n"`.
 * In this case, the instance variable `strings` is saved from the last add-message call so it is now: `"WHAT's UP" + "\n" + "My name is Bob." + "\n"`. Since `parameters` and `url` are local variables, they are recreated. `parameters` is now `["s", "My name is Bob."]`. `url` is now `"localhost:2222/add-message?s=My name is Bob."`.
 
-#Part 2
-##Reversed array bug from ArrayExamples.java
+# Part 2
+
+## Reversed array bug from ArrayExamples.java
 The `reversed(int[] arr)` method has a symptom in which the method doesn't properly reverse an inputted int array.
 **Failure inducing input**
 It fails the JUnit test:
