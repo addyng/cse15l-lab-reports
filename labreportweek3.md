@@ -30,10 +30,11 @@ Below are the result of two actions utilizing the `/add-message` path
 * In this case, the instance variable `strings` is saved from the last add-message call so it is now: `"WHAT's UP" + "\n" + "My name is Bob." + "\n"`. Since `parameters` and `url` are local variables, they are recreated. `parameters` is now `["s", "My name is Bob."]`. `url` is now `"localhost:2222/add-message?s=My name is Bob."`.
 
 # Part 2
-
 ## Reversed array bug from ArrayExamples.java
 The `reversed(int[] arr)` method has a symptom in which the method doesn't properly reverse an inputted int array.
+
 **Failure inducing input**
+
 It fails the JUnit test:
 ```
 @Test
@@ -45,6 +46,7 @@ It fails the JUnit test:
 in which the input is an int array, `input1 = {1, 2, 3}`;
 
 **Passing input**
+
 It passes the JUnit test:
 ```
 @Test
@@ -56,11 +58,13 @@ It passes the JUnit test:
 in which the input an empty int array, `input1 = { }`.
 
 **Symptoms**
+
 The symptoms are shown below:
 ![Symptoms](Screenshot 2023-01-30 at 7.58.57 AM.png)
 As seen in the screenshot, the empty array input passes while the other fails. The symptom of the failing test was that the element at index 0 was `0` instead of `3`.
 
 **The Bug**
+
 Before code:
 ```
 static int[] reversed(int[] arr) {
@@ -83,5 +87,5 @@ static int[] reversed(int[] arr) {
 ```
 The before code had a bug causing the resulting array to be an int array of 0s. This is because a new array `newArray` was created with the same length as the inputted array and then the values from `newArray` (starting with highest index) were then assigned to the inputted array (starting from index 0). This would result in an array of only 0s as newArray has default values of 0 since it is an int array. The after code fixes this issue by swapping the new array with the input array within the for loop, and then returning the new array. The for loop assigns the input array's values (starting from index 0) to the new array (counting down from the highest index). 
 
-#Part 3
+# Part 3
 This lab taught me how to start a webserver and implement different functionality depending on the URL. I learned how to get the path and query and how to run the web server on a remote server.
