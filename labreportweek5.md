@@ -32,24 +32,18 @@ Source: I found the `-r` option from the `grep` general commands manual accessed
 
 ## Example 2.1: Find files containing a specific string and return their paths with `-l`
 ```
-grep -r -l "parrot" ./written_2
-./written_2/non-fiction/OUP/Berk/ch2.txt
-./written_2/travel_guides/berlitz1/WhatToFWI.txt
-./written_2/travel_guides/berlitz1/WhatToMallorca.txt
-./written_2/travel_guides/berlitz1/WhereToMadeira.txt
-./written_2/travel_guides/berlitz1/HistoryFWI.txt
-./written_2/travel_guides/berlitz1/IntroJapan.txt
-./written_2/travel_guides/berlitz2/Berlin-WhereToGo.txt
-./written_2/travel_guides/berlitz2/Cuba-WhatToDo.txt
+grep -l "parrot" ./written_2/travel_guides/berlitz2/*.txt
 ./written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
+./written_2/travel_guides/berlitz2/Berlin-WhereToGo.txt
 ./written_2/travel_guides/berlitz2/Bermuda-WhatToDo.txt
+./written_2/travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+./written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt
+./written_2/travel_guides/berlitz2/Cuba-WhatToDo.txt
 ./written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 ./written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt
-./written_2/travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
 ./written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
-./written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt
 ```
-In the code above, I am using `grep`'s recursive search (`-r`) and `--files-with-matches` (`-l`) option. In conjunction with `-r`, the `-l` option returns only the file path corresponding to instances of the desired string `"parrot"` being found within the `./written_2` directory. `-l` is useful if you only want the file paths containing a string, which can be less confusing since there won't be repetitive paths or a large chunk of text. `-l` only searches through a file until it finds the first instance of the string, meaning it won't return the same path multiple times.
+In the code above, I am using `grep`'s `--files-with-matches` (`-l`) option. The `-l` option returns only the file paths corresponding to instances of the desired string `"parrot"` being found within the `./written_2/travel_guides/berlitz2/*.txt` files. `-l` is useful if you only want the file paths containing a string, which can be less confusing since there won't be repetitive paths or a large chunk of text. `-l` only searches through a file until it finds the first instance of the string, meaning it won't return the same path multiple times.
 
 ## Example 2.2
 ```
