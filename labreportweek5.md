@@ -395,6 +395,6 @@ grep -r -i -o "PALM TREE" ./written_2
 grep -r -i -o "PALM TREE" ./written_2 | wc -l
       39
 ```
-In the code above, I used `-r`, `-i`, and `-o`. `-r` made `grep` search through all the files found in `written_2/` and its sub-directories, then `i` and `o` found all instances of `"palm tree"` (ignoring case-sensitivity) within the files. Since `-o` returns one line with the path and string for each instance of `"palm tree"`, I can use `wc -l` to get the number of times `"palm tree"` was written across all the files. `-o` is also useful for finding what files contain a desired string without returning a confusing block of before and after text.
+In the code above, I used `-r`, `-i`, and `-o`. `-r` made `grep` search through all the files found in `./written_2` and its sub-directories, then `i` and `o` found all instances of `"palm tree"` (ignoring case-sensitivity) within the files. Since `-o` returns one line with the path and string for each instance of `"palm tree"`, I can use `wc -l` to get the number of times `"palm tree"` was written across all the files. `-o` is also useful for finding what files contain a desired string without returning a confusing block of before and after text.
 
 Source: I was trying to figure out how to remove the large amount of before and after text and stumbled upon this [StackoverFlow Link](https://stackoverflow.com/questions/1546711/can-grep-show-only-words-that-match-search-pattern) about the `-o` option. I also used `man grep` to learn more about the option.
