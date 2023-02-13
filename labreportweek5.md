@@ -28,7 +28,7 @@ Source: I found the `-r` option from the `grep` general commands manual accessed
 
 ---
 
-## Example 2.1: Find files containing a specific string and return their respective paths with `-l`
+## Example 2.1: Find files containing a specific string and return their paths with `-l`
 ```
 grep -r -l "parrot" ./written_2
 ./written_2/non-fiction/OUP/Berk/ch2.txt
