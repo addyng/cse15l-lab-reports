@@ -349,4 +349,53 @@ the
 the
 ```
 In the code above, I used the --only-matching option, `-o`, which makes `grep` only return the matching string within the file. As shown, the txt file `HandRLasVegas.txt` contained 9 instances of the string `"the"`. `-o` is useful for counting the number of times a string appears in a file when used with the `wc` command.
-Using -o https://stackoverflow.com/questions/1546711/can-grep-show-only-words-that-match-search-pattern to only return the word
+
+## Example 4.2
+```
+grep -r -i -o "PALM TREE" written_2/
+written_2//travel_guides/berlitz1/WhereToGreek.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToGreek.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToIndia.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToIndia.txt:palm tree
+written_2//travel_guides/berlitz1/IntroLosAngeles.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToItaly.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToItaly.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToItaly.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToItaly.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToJapan.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToJapan.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToJapan.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToFrance.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToFrance.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToMallorca.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToMallorca.txt:palm tree
+written_2//travel_guides/berlitz1/IntroFWI.txt:palm tree
+written_2//travel_guides/berlitz1/IntroIndia.txt:palm tree
+written_2//travel_guides/berlitz1/WhatToJamaica.txt:palm tree
+written_2//travel_guides/berlitz1/WhatToJamaica.txt:palm tree
+written_2//travel_guides/berlitz1/WhatToJamaica.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToHongKong.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToFWI.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToFWI.txt:palm tree
+written_2//travel_guides/berlitz1/WhereToFWI.txt:palm tree
+written_2//travel_guides/berlitz2/Costa-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/California-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/California-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Bali-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Bali-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Bali-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Bali-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Bali-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Barcelona-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Barcelona-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/China-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/CstaBlanca-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/PuertoRico-WhereToGo.txt:palm tree
+written_2//travel_guides/berlitz2/Vallarta-WhereToGo.txt:palm tree
+
+grep -r -i -o "PALM TREE" written_2/ | wc -l
+      39
+```
+In the code above, I used `-r`, `-i`, and `-o`. `-r` made `grep` search through all the files found in `written_2/` and its sub-directories, then `i` and `o` found all instances of `"palm tree"` (ignoring case-sensitivity) within the files. Since `-o` returns one line with the path and string for each instance of `"palm tree"`, I can use `wc -l` to get the number of times `"palm tree"` was written across all the files. `-o` is also useful for finding what files contain a desired string without returning a confusing block of before and after text.
+
+Source: I was trying to figure out how to remove the large amount of before and after text and stumbled upon this [StackoverFlow Link](https://stackoverflow.com/questions/1546711/can-grep-show-only-words-that-match-search-pattern) about the `-o` option. I also used `man grep` to learn more about the option.
