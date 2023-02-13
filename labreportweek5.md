@@ -3,6 +3,8 @@
 ## 8 Examples of Using the `grep` Command
 > `grep` is a command that takes in a string and file argument and searches through the file to find lines containing that string and returns the path and line containing the desired string.
 
+---
+
 ## Example 1.1: Search through directories rather than files with `-r`
 ```
 grep -r "motels" ./written_2
@@ -333,6 +335,8 @@ grep -r -l -i "THE" ./written_2
 In the code above, I used the `-r`, `-l`, and `-i` option in order to find all file paths containing the string `"THE"` regardless of case-sensivitiy within all files in the `./written_2` directory. `-r` made `grep` search through all the directories and sub-directories, then `l` in conjunction with `-i` searched only for the first instance of `"THE"` in any capitalized form within all the files and returned the respective file paths. When used in conjunction with other options, `-i` can help find all the instances of a string regardless of case-sensitivity.
 
 Source: I found the `-i` option from the `grep` general commands manual accessed by typing `man grep` into the terminal.
+
+---
 
 ## Example 4.1 - Return the exact desired word from a file with `-o`
 ```
