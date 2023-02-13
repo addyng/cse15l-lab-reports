@@ -5,20 +5,25 @@
 
 ## Example 1.1: Search through directories rather than files with `-r`
 ```
-grep -r "Lucayans" written_2/ > grep-results.txt
+grep -r "motels" written_2/
 cat grep-results.txt
-written_2//travel_guides/berlitz2/Bahamas-History.txt:Centuries before the arrival of Columbus, a peaceful Amerindian people who called themselves the Luccucairi had settled in the Bahamas. Originally from South America, they had traveled up through the Caribbean islands, surviving by cultivating modest crops and from what they caught from sea and shore. Nothing in the experience of these gentle people could have prepared them for the arrival of the Pinta, the Niña, and the Santa Maria at San Salvador on 12 October 1492. Columbus believed that he had reached the East Indies and mistakenly called these people Indians. We know them today as the Lucayans. Columbus claimed the island and others in the Bahamas for his royal Spanish patrons, but not finding the gold and other riches he was seeking, he stayed for only two weeks before sailing towards Cuba.
-written_2//travel_guides/berlitz2/Bahamas-History.txt:The Spaniards never bothered to settle in the Bahamas, but the number of shipwrecks attest that their galleons frequently passed through the archipelago en route to and from the Caribbean, Florida, Bermuda, and their home ports. On Eleuthera the explorers dug a fresh-water well — at a spot now known as “Spanish Wells” — which was used to replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold. As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
+written_2//non-fiction/OUP/Kauffman/ch1.txt:Similar phenomena may occur in an econosphere. Small and large avalanches of extinction and speciation events occur in our technologies. A colleague, Brian Arthur, is fond of pointing out that when the car came in, the horse, buggy, buggy whip, saddlery, smithy, and Pony Express went out of business. The car paved the way for an oil and gas industry, paved roads, motels, fast-food restaurants, and suburbia. The Austrian economist Joseph Schumpeter wrote about this kind of turbulence in capitalist economies. These Schumpeterian gales of creative destruction appear to occur in small and large avalanches. Perhaps the avalanches arise in power laws. And, like species, most firms die young; some make it to old age = Storre, in Sweden, is over nine hundred years old. The distribution of firm lifetimes is again a power law.
+written_2//non-fiction/OUP/Kauffman/ch9.txt:But the econosphere has similar extinction and speciation events. Consider my favorite example: The introduction of the automobile drove the horse, as a mode of transport, extinct. With the horse went the barn, the buggy, the stable, the smithy, the saddlery, the Pony Express. With the car came paved roads, an oil and gas industry, motels, fast-food restaurants, and suburbia. The Austrian economist, Joseph Schumpeter, called these gales of creative destruction, where old goods die and new ones are born. One bets that Schumpeterian gales of creative destruction come in a power law distribution, with many small avalanches and few large ones. More, if species and genera have a power law distribution of lifetimes, what of firms? Firms do show a similar power law distribution of lifetimes. Most firms die young, some last a long time. We may bet that technologies show similar avalanches of speciation and extinction events and lifetime distributions.
+written_2//travel_guides/berlitz1/HandRLasVegas.txt:        available hotels and motels, call the Las Vegas Convention and Visitors
+written_2//travel_guides/berlitz1/WhereToMalaysia.txt:        and other sports. (There are also small inns and motels in the region
+written_2//travel_guides/berlitz1/WhereToMalaysia.txt:        resort hotels and motels. If you are traveling there by road (rather
+written_2//travel_guides/berlitz1/HandRLosAngeles.txt:        except on executive floors and at some budget motels that offer morning
+written_2//travel_guides/berlitz2/California-WhereToGo.txt:Don’t be put off by the name Death Valley. It is a legacy of the bitter hardships endured by Gold Rush hopefuls who set out to cross the desert from Arizona and Nevada. Some never made it. Today’s travelers, however, are well catered to, with motels and campsites at Furnace Creek and Stovepipe Wells. Begin at the Furnace Creek Visitor Center, where you can pick up maps and information on the road conditions, hiking trails, and general desert safety. Driving is the only way to get around, but remember that distances are great and gasoline stations few and far between. Make sure your car is in good mechanical condition and that the tank is full before you begin each day’s tour. Also, you would be well advised to carry spare water, just in case the radiator boils over.
+written_2//travel_guides/berlitz2/Canada-WhereToGo.txt:The true marvel of Niagara is how nature manages to triumph over tawdry commercialism, perhaps less strident on the Canadian than on the American side of the border marked by the Falls. No amount of pushy peddlers or tacky pink honeymoon motels (if you do stay overnight, ask to see one of the hilarious bridal suites) can diminish the spectacle of that mass of white water taking its awesome plunge on the way from Lake Erie towards Lake Ontario and the Atlantic.
 ```
-In the code above, I am using `grep`'s recursive search option. `-r` allows the user to input a directory rather than a file, for which `grep` will search through the directory and its sub-folders files in order to find lines within files that match the desired string. Searching for `"Lucayans"` returned `written_2//travel_guides/berlitz2/Bahamas-History.txt` along with the lines of text within that file containing the string `Lucayans`. As you can see, the `-r` option is useful for searching through large directories without having to write a `grep` command for each text file. It can find instances of a `string` amongst many directories and files.
+In the code above, I am using `grep`'s recursive search option. `-r` allows the user to input a directory rather than a file, for which `grep` will search through the directory and its sub-folders files in order to find lines within files that match the desired string. Searching for `"motels"` returned for example, `written_2//travel_guides/berlitz1/WhereToMalaysia.txt` along with the lines of text within that file containing the string `motels`. As you can see, the `-r` option is useful for searching through large directories without having to write a `grep` command for each text file. It can find instances of a `string` amongst many directories and files.
 
 ## Example 1.2
 ```
-grep -r "scary" written_2/travel_guides > grep-results.txt
-cat grep-results.txt
+grep -r "scary" written_2/travel_guides
 written_2/travel_guides/berlitz1/WhereToHongKong.txt:        raised expressways. The scary traffic is a real experience — vehicles
 ```
-In the code above, I've given the directory `written_2/travel_guides` for `grep -r` to search through. `grep` searches through all the files contained within the `travel_guides` sub-directory and finds matching instances of the string `"scary"` within those files. The resulting output contained the given path along with the relative path to the file containing the string `"scary"`: `written_2/travel_guides/berlitz1/WhereToHongKong.txt:` along with the corresponding line of text: `raised expressways. The scary traffic is a real experience — vehicles`. With the `-r` option, I can search through any specified directory in order to find many instances of a string. Since `grep -r` doesn't stop searching through a file until the end, it will return all instances of the word within the same file similar to `CTRL-F` on a document app.
+In the code above, I've given the directory `written_2/travel_guides` for `grep -r` to search through. `grep` searches through all the files contained within the `travel_guides` sub-directory and finds matching instances of the string `"scary"` within those files. The resulting output contained the given path along with the relative path to the file containing the string `"scary"`: `written_2/travel_guides/berlitz1/WhereToHongKong.txt` along with the corresponding line of text: `raised expressways. The scary traffic is a real experience — vehicles`. With the `-r` option, I can search through any specified directory in order to find many instances of a string. Since `grep -r` doesn't stop searching through a file until the end, it will return all instances of the word within the same file similar to `CTRL-F` on a document app.
 
 Source: I found the `-r` option from the `grep` general commands manual accessed by typing `man grep` into the terminal.
 
@@ -26,8 +31,7 @@ Source: I found the `-r` option from the `grep` general commands manual accessed
 
 ## Example 2.1: Find files containing a specific string and return their respective paths with `-l`
 ```
-grep -r -l "parrot" written_2/ > grep-results.txt
-cat grep-results.txt 
+grep -r -l "parrot" written_2/
 written_2//non-fiction/OUP/Berk/ch2.txt
 written_2//travel_guides/berlitz1/WhatToFWI.txt
 written_2//travel_guides/berlitz1/WhatToMallorca.txt
@@ -48,8 +52,7 @@ In the code above, I am using `grep`'s recursive search (-r) and files-with-matc
 
 ## Example 2.2
 ```
-grep -r -l "sunny" written_2/ > grep-results.txt
-cat grep-results.txt
+grep -r -l "sunny" written_2/
 written_2//travel_guides/berlitz1/HistoryJamaica.txt
 written_2//travel_guides/berlitz1/WhereToLakeDistrict.txt
 written_2//travel_guides/berlitz1/IntroMadrid.txt
@@ -77,8 +80,8 @@ written_2//travel_guides/berlitz2/Algarve-WhereToGo.txt
 written_2//travel_guides/berlitz2/Nepal-WhatToDo.txt
 written_2//travel_guides/berlitz2/Vallarta-WhereToGo.txt
 
-wc -l grep-results.txt
-      26 grep-results.txt
+grep -r -l "sunny" written_2/ | wc -l
+      26
 ```
 In the code above, I'm searching through the `written_2/` directory and its subfolders using `-r`. `-l` makes `grep` search through each file up until the point that it finds the first instance of the desired string `"sunny"` and prints the corresponding file path into `grep-results.txt`. When combined with the `wc` command, you can easily find the number of files that contain the string `sunny`. 
 
@@ -88,8 +91,7 @@ Source: I found the `-l` option from the `grep` general commands manual accessed
 
 ## Example 3.1: Ignore case-sensitivity with `-i`
 ```
-grep -i "THIS" written_2/travel_guides/berlitz2/Athens-History.txt > grep-results.txt
-cat grep-results.txt
+grep -i "THIS" written_2/travel_guides/berlitz2/Athens-History.txt
 The actual history of the city-state of Athens is just as fascinating as its mythology. From around 2000 b.c. wandering bands filtered into Greece from Asia Minor. Known as Achaeans, they were the first Greek-speaking people in the area, and over the centuries they built many imposing fortresses and developed the rich Mycenaean civilization, based in the Peloponnese. The citadel at Mycenae, seat of this most powerful of early Greek cultures, was erected to the south of Athens. Surrounded by a pair of precipitous ravines, the imposing walls of the citadel were some forty feet high and twenty feet thick, virtually impregnable.
 The moving power behind this unrivaled time of greatness, which has come to be known as the Golden Age, was Pericles. This liberal-inclined aristocrat was, in effect, the supreme ruler of Athens and its empire for 30 years until his death in 429 b.c.
 During all this, the Athenian political system allowed the average citizen a greater degree of participation in public life than ever before anywhere, and perhaps since. Of course, the number of citizens (free adult males) was small — probably not above 30,000 — while the population as a whole, including women, children, resident aliens, and slaves, might have been ten times as great.
@@ -333,4 +335,18 @@ In the code above, I used the `-r`, `-l`, and `-i` option in order to find all f
 
 Source: I found the `-i` option from the `grep` general commands manual accessed by typing `man grep` into the terminal.
 
-## Example 4.1 - Using -o https://stackoverflow.com/questions/1546711/can-grep-show-only-words-that-match-search-pattern to only return the word
+## Example 4.1 - Return the exact desired word from a file with `-o`
+```
+grep -o "the" written_2/travel_guides/berlitz1/HandRLasVegas.txt
+the
+the
+the
+the
+the
+the
+the
+the
+the
+```
+In the code above, I used the --only-matching option, `-o`, which makes `grep` only return the matching string within the file. As shown, the txt file `HandRLasVegas.txt` contained 9 instances of the string `"the"`. `-o` is useful for counting the number of times a string appears in a file when used with the `wc` command.
+Using -o https://stackoverflow.com/questions/1546711/can-grep-show-only-words-that-match-search-pattern to only return the word
