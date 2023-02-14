@@ -78,7 +78,7 @@ grep -r -l "sunny" ./written_2
 grep -r -l "sunny" ./written_2 | wc -l
       26
 ```
-In the code above, I'm searching through the `./written_2` directory and its subfolders using `-r`. `-l` makes `grep` search through each file up until the point that it finds the first instance of the desired string `"sunny"` and prints the corresponding file path into `grep-results.txt`. When combined with the `wc` command, you can easily find the number of files that contain the string `sunny`. 
+In the code above, I'm searching through the `./written_2` directory and its subfolders using `-r`. `-l` makes `grep` search through each file up until the point that it finds the first instance of the desired string `"sunny"` and returns the file path. When combined with the `wc` command, you can easily find the number of files that contain the string `sunny`. 
 
 Source: I found the `-l` option from the `grep` general commands manual accessed by typing `man grep` into the terminal.
 
