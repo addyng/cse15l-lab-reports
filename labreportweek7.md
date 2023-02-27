@@ -41,3 +41,5 @@ Keys pressed:
 ## Step 6: Run the tests, demonstrating that they fail
 ![Image](Screenshot 2023-02-27 at 2.11.25 AM.png)
 Keys pressed:
+<CTRL><R> javac
+<CTRL><R> java <space>
