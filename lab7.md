@@ -8,7 +8,7 @@ For the Labs Done Quick challenge, there are 9 steps.
 
 ## Steps 1-3
 ---
-For step 1, make sure that there are no existing forks of Lab 7 in your own GitHub account's repositories. Then, make a fresh fork of the repo at: [Lab 7](https://github.com/ucsd-cse15l-w23/lab7). This completes the setup for the lab.
+For step 1, make sure that there are no existing forks of Lab 7 in your own GitHub account's repositories. Then, make a fresh fork of the repo at: [Lab 7](https://github.com/ucsd-cse15l-w23/lab7). This completes the setup for the lab. Now start your stopwatch!
 
 ## Step 4: Log into ieng6
 ---
