@@ -64,7 +64,7 @@ Keys pressed:
 ---
 ![Image](Screenshot 2023-02-27 at 2.42.17 AM.png)
 Keys pressed:
-* `git <space> add <space> ListExamples.java
+* `git <space> add <space> ListExamples.java`
 * `git <space> commit <space> -m <space> "Updated"`
 * `git <space> push`
 > This will only work if you properly followed the setup instructions of generating an SSH key.
