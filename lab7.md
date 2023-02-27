@@ -12,7 +12,7 @@ For step 1, make sure that there are no existing forks of Lab 7 in your own GitH
 
 ## Step 4: Log into ieng6
 ---
-To log into your ieng6 account, the format of your email should be: `cs15l[quarter][year][uniqueID]@ieng6.ucsd.edu`.
+To log into your `ieng6` account, the format of your email should be: `cs15l[quarter][year][uniqueID]@ieng6.ucsd.edu`.
 For example, mine is: `cs15lwi23amm@ieng6.ucsd.edu`.
 The command is: `ssh [email]`
 
@@ -49,8 +49,8 @@ Keys pressed:
 * `<CTRL>R java <space> <enter>`
 
 `<CTRL>R` is the command for **reverse-i-search**, which I used to find the commands in my history to compile and run the tests as I have ran them before.
-* The command for compiling the files and tests is `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`.
-* The command for running the test is `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests`.
+* The command for compiling the files and tests is `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`
+* The command for running the test is `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests`
 
 ## Step 7: Edit the code file to fix the failing test
 ---
@@ -80,7 +80,7 @@ Keys pressed:
 * `git <space> commit <space> -m <space> "Updated"`
 * `git <space> push`
 
-`git add` adds a desired file to be committed to the repository. `git commit -m` essentially locks in your changes locally from `git add` to later be pushed to the repository. `git push` sends the committed changes from your computer (`in this case, the remote server`) to the online repository at GitHub.
+`git add` adds a desired file to be committed to the repository. `git commit -m` essentially locks in your changes locally from `git add` to later be pushed to the repository. The `-m` option allows you to add a commit message. `git push` sends the committed changes from your computer (`in this case, the remote server`) to the online repository at GitHub.
 > This will only work if you properly followed the setup instructions of generating an SSH key.
 
 As you can see, the file has been updated on the GitHub website.
