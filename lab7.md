@@ -2,7 +2,7 @@
 
 ## Practice with editing a file in `nano` and using `git`
 
-These instructions assume you have followed the steps for generating an SSH key for ieng6 and generating an SSH key for GitHub. This will make committing and pushing to GitHub easier. If you haven't, the instructions to do so can be found on the CSE 15L website for Week 7 at: [Guide](https://ucsd-cse15l-w23.github.io/week/week7/#github-and-login-command-line-setup)
+These instructions assume you have followed the steps for generating an `SSH key` for `ieng6` and generating an `SSH key` for GitHub. This will make committing and pushing to GitHub easier. If you haven't, the instructions to do so can be found on the CSE 15L website for Week 7 at: [Guide](https://ucsd-cse15l-w23.github.io/week/week7/#github-and-login-command-line-setup)
 
 For the Lab Done Quick challenge, there are 9 steps.
 
@@ -21,7 +21,8 @@ Keys pressed:
 * Open terminal: ``<CTRL><`>`` at the same time
 * `ssh <space> cs15lwi23amm@ieng6.ucsd.edu`
 
-`ssh` is used to log into the remote server. Since I am on MacOS, I didn't have to change my terminal. If you're on Windows, you may have to change your terminal to `Git Bash` in order to login with `ssh`.
+`ssh` is used to log into the remote server. 
+> Since I am on MacOS, I didn't have to change my terminal. If you're on Windows, you may have to change your terminal to `Git Bash` in order to login with `ssh`. I didn't have to enter a password due to the initial steps for generating SSH keys.
 
 ## Step 5: Clone your fork of the repository from your Github account
 ---
