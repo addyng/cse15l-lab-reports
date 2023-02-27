@@ -2,7 +2,7 @@
 
 ## Practice with editing a file in `nano` and using `git`
 
-These instructions assume you have followed the steps for generating an `SSH key` for `ieng6` and generating an `SSH key` for GitHub. This will make committing and pushing to GitHub easier. If you haven't, the instructions to do so can be found on the CSE 15L website for Week 7 at: [Guide](https://ucsd-cse15l-w23.github.io/week/week7/#github-and-login-command-line-setup)
+These instructions assume you have followed the steps for generating an `SSH key` for `ieng6` and generating an `SSH key` for GitHub. This will make committing and pushing to GitHub easier. If you haven't, the instructions to do so can be found on the CSE 15L website for Week 7 at: [Lab 7](https://ucsd-cse15l-w23.github.io/week/week7/#github-and-login-command-line-setup)
 
 For the Lab Done Quick challenge, there are 9 steps.
 
