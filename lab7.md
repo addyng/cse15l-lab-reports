@@ -1,4 +1,4 @@
-# CSE 15L Week 5 Lab Report by *Addy*
+# CSE 15L Week 7 Lab Report by *Addy*
 
 ## Practice with editing a file in `nano` and using `git`
 
@@ -20,6 +20,7 @@ The command is: `$ ssh [email]`
 Keys pressed: 
 * Open terminal: ``<CTRL><`>`` at the same time
 * `ssh <space> cs15lwi23amm@ieng6.ucsd.edu`
+
 `ssh` is used to log into the remote server. Since I am on MacOS, I didn't have to change my terminal. If you're on Windows, you may have to change your terminal to `Git Bash` in order to login with `ssh`.
 
 ## Step 5: Clone your fork of the repository from your Github account
@@ -33,6 +34,7 @@ Then return back to your terminal. Enter the clone command: `git clone` followed
 ![Image](Screenshot 2023-02-27 at 1.59.33 AM.png)
 Keys pressed:
 * `git <space> clone <COMMAND>V <enter>` `<COMMAND>V` pastes the copied link. `<CTRL>V` if on Windows.
+
 `git clone` Clones the repo into the remote server. Since we used the SSH cloning link, we are able to easily commit and push changes from the terminal.
 
 ## Step 6: Run the tests, demonstrating that they fail
@@ -44,6 +46,7 @@ Keys pressed:
 * `ls`
 * `<CTRL>R javac <enter>` Since I've already run the tests before, I could access it with **reverse-i-search**.
 * `<CTRL>R java <space> <enter>`
+
 `<CTRL>R` is the command for **reverse-i-search**, which I used to find the commands in my history to compile and run the tests as I have ran them before.
 * The command for compiling the files and tests is `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`.
 * The command for running the test is `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests`.
@@ -56,6 +59,7 @@ Keys pressed:
 * Once in the nano screen: Flick trackpad upwards until you reach the bottom of the file.
 * `<up><up><up><up><up><up><up>, <right><right><right><right><right><right><right><right><right><right><right><right>, <backspace> 2` to change `index1` to `index2`
 * `<CTRL>O <enter> <CTRL>X`
+
 `nano [file]` opens the `nano` screen for a desired file, which allows the user to edit the file from the terminal. `<CTRL>O` saves the edits. `<CTRL>X` exits out of `nano`.
 
 ## Step 8: Run the tests, demonstrating that they now succeed
@@ -64,6 +68,7 @@ Keys pressed:
 Keys pressed:
 * `<CTRL>R javac <enter>`
 * `<CTRL>R java <space> <enter>`
+
 I repeated the steps from step 6 to compile and run the testing files.
 
 ## Step 9: Commit and push the resulting change to your Github account
@@ -73,6 +78,7 @@ Keys pressed:
 * `git <space> add <space> ListExamples.java`
 * `git <space> commit <space> -m <space> "Updated"`
 * `git <space> push`
+
 `git add` adds a desired file to be committed to the repository. `git commit -m` essentially locks in your changes locally from `git add` to later be pushed to the repository. `git push` sends the committed changes from your computer (`in this case, the remote server`) to the online repository at GitHub.
 > This will only work if you properly followed the setup instructions of generating an SSH key.
 
