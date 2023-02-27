@@ -14,7 +14,7 @@ For step 1, make sure that there are no existing forks of Lab 7 in your own GitH
 ---
 To log into your ieng6 account, the format of your email should be: `cs15l[quarter][year][uniqueID]@ieng6.ucsd.edu`.
 For example, mine is: `cs15lwi23amm@ieng6.ucsd.edu`.
-The command is: `$ ssh [email]`
+The command is: `ssh [email]`
 
 ![Image](Screenshot 2023-02-27 at 1.46.40 AM.png)
 Keys pressed: 
