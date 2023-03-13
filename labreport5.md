@@ -1,6 +1,6 @@
 # CSE 15L Week 9 Lab Report by *Addy*
 
-## Labs Done Quick with a bash script
+## Labs Done Quick (Lab Report 4) with a bash script
 
 The bash script I wrote is:
 ---
@@ -42,13 +42,13 @@ First, I have to `cd` into the cloned `lab7` directory in order to access the ja
 
 ## Step 7: Edit the code file to fix the failing test
 ---
-Previously, I used `nano` to edit `ListExamples.java`. Since I'm using a bash script, this would be difficult as I would have to interfere with the `nano` interface while the script is running. Instead, I used the `sed` or **stream editor** command, which reads a file, edits it as desired, and then returns it as to standard output.
+Previously, I used `nano` to edit `ListExamples.java`. Since I'm using a bash script, this would be difficult as I would have to interfere with the `nano` interface while the script is running. Instead, I used the `sed` or **stream editor** command, which reads a file, edits it as desired, and then returns it as standard output.
 This step was done with the code:
 ```
 sed '43s/index1 += 1/index2 += 1/' ListExamples.java > ListExamples.txt
 cat ListExamples.txt > ListExamples.java
 ```
-To walkthrough the command, the `43s` specifies to edit `Line 43` and the `s` represents that substitution will happen. `/` is a delimiter. `index1 += 1/index2 += 1` represents `pattern/replace`, essentially, `sed` will look for all instances with the same pattern as `index1 += 1` then replace them with `index2 += 1`, but since we specified `43s`, it will only replace at line 43. `ListExamples.java > ListExamples.txt` means that `ListExamples.java` is the file read, and then `sed`'s returns the standard output and redirects it to `ListExamples.txt`. Then, `cat ListExamples.txt > ListExamples.java` will redirect the contents printed by `ListExamples.txt` to `ListExamples.java`.
+To walkthrough the command, the `43s` specifies to edit `Line 43` and the `s` represents that substitution will happen. `/` is a delimiter. `index1 += 1/index2 += 1` represents `pattern/replace`, essentially, `sed` will look for all instances with the same pattern as `index1 += 1` then replace them with `index2 += 1`, but since we specified `43s`, it will only replace at line 43. `ListExamples.java > ListExamples.txt` means that `ListExamples.java` is the file read, and then `sed` returns the standard output and redirects it to `ListExamples.txt`. Then, `cat ListExamples.txt > ListExamples.java` will redirect the contents printed by `ListExamples.txt` to `ListExamples.java`.
 
 ## Step 8: Run the tests, demonstrating that they now succeed
 ---
